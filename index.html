@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رزومه من - امیرعلی کریلی</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="resume">
+
+    <!-- ستون سمت چپ: آواتار -->
+    <aside class="left-side box fade-in">
+      <img src="unnamed.jpg" alt="آواتار" class="avatar">
+      <a href="resume.pdf" class="btn">📄 دانلود رزومه</a>
+    </aside>
+
+    <!-- ستون سمت راست: متن‌ها -->
+    <main class="right-side">
+
+      <section class="intro box fade-in">
+        <h1>امیرعلی کریلی</h1>
+        <h2>دانشجوی کامپیوتر</h2>
+        <p>دانشجو و کارآموز کامپیوتر، امنیت، برنامه نویسی، متخصص موسیقی و آهنگسازی</p>
+      </section>
+
+      <section class="skills box fade-in">
+        <h3>مهارت‌ها</h3>
+
+        <div class="skill">
+          <p>HTML / CSS</p>
+          <div class="skill-bar"><div class="fill" style="width: 85%;"></div></div>
+        </div>
+
+        <div class="skill">
+          <p>Python</p>
+          <div class="skill-bar"><div class="fill" style="width: 75%;"></div></div>
+        </div>
+
+        <div class="skill">
+          <p>Graphic Design / Videography</p>
+          <div class="skill-bar"><div class="fill" style="width: 90%;"></div></div>
+        </div>
+
+        <div class="skill">
+          <p>Sound Engineering / Composing</p>
+          <div class="skill-bar"><div class="fill" style="width: 95%;"></div></div>
+        </div>
+      </section>
+
+      <section class="experience box fade-in">
+        <h3>تجربه کاری</h3>
+        <ul>
+          <li><strong>فری لنسینگ</strong> – طراحی گرافیک (2019 - 2021)</li>
+          <li><strong>فری لنسینگ</strong> – طراحی وبسایت (2021 - 2023)</li>
+          <li><strong>فری لنسینگ</strong> – آهنگسازی (2019 - اکنون)</li>
+          <li><strong>پاکو گیتار</strong> – مدیر فروش (2024–اکنون)</li>
+        </ul>
+      </section>
+
+      <section class="education box fade-in">
+        <h3>تحصیلات</h3>
+        <p>کارشناسی مهندسی کامپیوتر، دانشگاه شمسی پور (2022 - اکنون)</p>
+      </section>
+
+      <section class="projects box fade-in">
+        <h3>پروژه‌ها</h3>
+        <ul>
+          <li><strong>AI Face Detection</strong> – طراحی هوش مصنوعی با پایتون</li>
+          <li><strong>Pacoguitar.ir</strong> – طراحی وبسایت کسب و کار استارتاپ</li>
+          <li><strong>Soundtrack/ Motion Picture </strong> – ساخت موسیقی بازی</li>
+        </ul>
+      </section>
+
+      <section class="contact box fade-in">
+        <h3>تماس</h3>
+        <p>📧 baronoffhell@gmail.com</p>
+        <p class="socials">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </p>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script>
+    // افکت fade هنگام اسکرول
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.3 };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* 🎨 تنظیمات پایه */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.resume {
+  display: flex;
+  max-width: 1200px;
+  margin: 50px auto;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* 🧍‍♂️ ستون سمت چپ */
+.left-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.left-side .avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #333;
+  background-color: #1e1e1e;
+  padding: 10px;
+}
+
+/* دکمه دانلود رزومه */
+.btn {
+  background-color: #1db954;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: #17a347;
+  transform: translateY(-2px);
+}
+
+/* 📦 ستون سمت راست */
+.right-side {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* استایل باکس‌ها */
+.box {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  transition: 0.3s;
+}
+
+/* افکت هاور برای باکس‌ها */
+.box:hover {
+  background-color: #2a2a2a;
+  transform: translateY(-3px);
+}
+
+/* تیترها */
+h1 { font-size: 2rem; margin-bottom: 5px; }
+h2 { font-size: 1.2rem; color: #bbb; margin-bottom: 10px; }
+h3 { font-size: 1.1rem; color: #1db954; margin-bottom: 10px; }
+
+p, li {
+  margin: 5px 0;
+  line-height: 1.6;
+}
+
+/* لینک‌ها */
+a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* 🌟 نوار مهارت‌ها */
+.skill {
+  margin-bottom: 15px;
+}
+.skill-bar {
+  width: 100%;
+  height: 8px;
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.fill {
+  height: 100%;
+  background: #1db954;
+  transition: width 1s ease;
+}
+
+/* 🔗 آیکون‌های شبکه اجتماعی */
+.socials a {
+  font-size: 1.5rem;
+  color: #1db954;
+  margin: 0 8px;
+  transition: 0.3s;
+}
+.socials a:hover {
+  color: #1e90ff;
+}
+
+/* ✨ افکت fade-in هنگام اسکرول */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 📱 واکنش‌گرایی */
+@media (max-width: 900px) {
+  .resume {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-side .avatar {
+    width: 200px;
+    height: 200px;
+  }
+
+  .right-side {
+    width: 90%;
+  }
+}
